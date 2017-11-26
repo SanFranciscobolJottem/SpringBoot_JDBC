@@ -21,18 +21,18 @@ public class ApiController {
 	}
 
 
-	@RequestMapping("/story")
-	public Story story() {
-		return storyService.getStory();
-	}
-
+//	@RequestMapping("/story")
+//	public Story story() {
+//		return storyService.getStory();
+//	}
+//
 	@RequestMapping("/title/{title}")
 	public Story searchForUser(@PathVariable(value = "title") String title) {
 		return storyService.getSpecificStory(title);
 	}
-	
-	@RequestMapping("/stories/{name}")
-	public List<Story> searchStoriesByBloggerName(@PathVariable(value = "name") String name) {
-		return storyService.getStoriesByBloggerName(name);
-	}
+//	
+//	@RequestMapping("/stories/{name}")
+//	public List<Story> searchStoriesByBloggerName(@PathVariable(value = "name") String name) {
+//		return storyService.getStoriesByBloggerName(name);
+//	}
 }

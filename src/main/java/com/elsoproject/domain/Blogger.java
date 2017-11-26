@@ -3,28 +3,22 @@ package com.elsoproject.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
-@Entity
 public class Blogger {
 	
-	@GeneratedValue
-	@Id
 	private Long id;
 	private String name;
 	private int age;
 	
-	@JsonBackReference
-	@OneToMany(mappedBy = "blogger")
 	private List<Story> stories;
 	
 	private Blogger(){
 		
+	}
+	
+	public Blogger(Long id, String name, int age){
+		this.id = id;
+		this.name = name;
+		this.age = age;
 	}
 	
 	public Blogger(String name, int age){

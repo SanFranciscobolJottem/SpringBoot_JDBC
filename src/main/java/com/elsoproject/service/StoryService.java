@@ -31,17 +31,17 @@ public class StoryService {
 		return storyRepo.findAll();
 	}
 	
-	public Story getStory(){
-		return storyRepo.findFirstByOrderByPostedDesc();
-	}
-
+//	public Story getStory(){
+//		return storyRepo.findFirstByOrderByPostedDesc();
+//	}
+//
 	public Story getSpecificStory(String title) {
 		return storyRepo.findByTitle(title);
 	}
-
-	public List<Story> getStoriesByBloggerName(String name) {
-		return storyRepo.findAllByBloggerNameIgnoreCaseOrderByPostedDesc(name);
-	}
+//
+//	public List<Story> getStoriesByBloggerName(String name) {
+//		return storyRepo.findAllByBloggerNameIgnoreCaseOrderByPostedDesc(name);
+//	}
 	
 //	@PostConstruct
 //	public void init(){
